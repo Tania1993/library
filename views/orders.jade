@@ -1,0 +1,25 @@
+extends layout
+
+block content
+    h1 Orders
+    //p= orders[10].userName
+    table(border = '1', id = "ordersTable") 
+        tbody(id = "ordersTableBody")
+            each order in orders
+                tr
+                    td= order.userName
+                        each book in order.books
+                            table(border = '3', id = "orderTable")
+                                tr
+                                    td= book
+                                    td= order.datePipicker
+                                    td: input(type = "submit" value = "Return book" id = "returnBook" onclick = "putDate()")
+                                    td: input(type = "submit" value = "Delete entry" id = "deleteEntry")
+      
+ 
+
+
+    
+
+      
+
