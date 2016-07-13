@@ -1,0 +1,117 @@
+body{
+	font: Georgia 14px;
+	background: rgba(175, 255, 255, 0.5);
+	color: rgba(0, 100, 255, 0.9);
+	padding: 10px;
+	margin: 0px;
+}
+
+h1{
+	font-style: italic;
+	font-size: 24px;
+	color: rgba(72, 29, 168, 0.6);
+}
+
+table, tr, td, th{
+	border: 1px solid white; 
+	padding: 5px;
+	border-collapse: collapse;
+	background: rgba(175, 255, 255, 0.1);
+	font-size: 14px;
+    /*color: brown;
+    column-width: 100px;*/
+}
+
+#ordersTable{
+    width: 1000px;
+    height: auto;
+    /*column-width: 150px;*/ 
+}
+
+#orderTable{
+    width: 900px;
+}
+
+.br{
+	border-radius: 10px;
+	position: relative;
+	/*top:100px;*/
+}
+
+#booksDiv, #userNameDiv, #datepickerDiv, #addDiv, #clean{
+	float: left;
+    margin-left: 15px;
+}
+
+
+#books{
+	width: 300px;
+	height: 22px;
+	/*background-color: rgba(175, 255, 255, 0.1);*/
+}
+
+#userName, #datepicker{
+    width: 230px;
+	height: 22px;
+}
+
+select, option, optgroup{
+	/*background-color: #F6F6F6;*/
+	border-radius: 20px;
+    /*for WebKit*/
+     -webkit-appearance: none;
+     /* for FF */
+      -moz-appearance: none;
+      text-indent: 0.01px; 
+      text-overflow: '';
+      /* for IE */
+      -ms-appearance: none;
+      appearance: none!important;
+}
+
+#add{
+	width: 150px;
+	height: 40px;
+    
+    font-weight: 500;
+    color: white;
+    text-decoration: none;
+    padding: .8em 1em calc(.8em + 3px);
+    border-radius: 3px;
+    background: rgb(64,199,129);
+    box-shadow: 0 -3px rgb(53,167,110) inset;
+    transition: 0.2s;
+}
+
+#add:hover { background: rgb(53, 167, 110); }
+
+#add:active {
+  background: rgb(33,147,90);
+  box-shadow: 0 3px rgb(33,147,90) inset;
+}
+
+#clean{
+	width: 150px;
+	height: 40px;
+    
+    font-weight: 500;
+    color: white;
+    text-decoration: none;
+    padding: .8em 1em calc(.8em + 3px);
+    border-radius: 3px;
+    background: rgb(255, 203, 0);
+    box-shadow: 0 -3px rgb(255, 203, 0) inset;
+    transition: 0.2s;
+}
+
+#clean:hover { background: rgb(255, 203, 0); }
+
+#clean:active {
+  background: rgb(255, 172, 0);
+  box-shadow: 0 3px rgb(255, 172, 0) inset;
+}
+
+#datepicker{
+	/*background-color: red;*/
+}
+
