@@ -8,18 +8,133 @@ block content
             each order in orders
                 tr
                     td= order.userName
+                        each id in order.books
+                            .hiddenID
+                                li= order.id
+                    td
                         each book in order.books
-                            table(border = '3', id = "orderTable")
-                                tr
-                                    td= book
-                                    td= order.datePipicker
-                                    td: input(type = "submit" value = "Return book" id = "returnBook" onclick = "putDate()")
-                                    td: input(type = "submit" value = "Delete entry" id = "deleteEntry")
-      
- 
+                            .listInterval
+                                li= book
+                    td
+                        each date in order.books
+                            .listInterval
+                                li= order.datePipicker
+                    td
+                        each returnBook in order.books
+                            li: input(type = "submit" value = "Return book" class = "returnBook" onclick = "returnBook(this)")
+                    td
+                        each deleteEntry in order.books
+                            li: input(type = "submit" value = "Delete entry" class = "deleteOrder" onclick = "deleteOrder(this)")
+
+    script.  
+        var i = 0, j = 0, k = 0;
+            $(".returnBook").each(function(){
+                $(this).attr("id", "returnbook" + i); 
+                i++;
+            });
+            $(".hiddenID").each(function(){ 
+               $(this).attr("id", "hiddenid" + j);  
+                j++;
+            });
+            $(".deleteOrder").each(function(){
+               $(this).attr("id", "deleteorder" + k)
+               k++;
+            });
+
+    script. 
+        function returnBook(){
+            var date = new Date();
+            var day = date.getDate();
+            var month = date.getMonth() + 1;
+            var year = date.getFullYear();
+            var dateReturn = month + "/" + day + "/" + year;
+            console.log(dateReturn);
+            
+            $(function(){
+                $(".returnBook").on("click", function(){
+                    var id = $(this).attr("id");
+                    var idNumber = id.match(/\d+/);
+                    //console.log(idNumber);
+                    var idHiddenID = new Array();
+                    $(".hiddenID").each(function (i) {
+                        idHiddenID.push(this.id);
+                    });
+          
+                    var valueIDwithtagname = document.getElementById(idHiddenID[idNumber]).innerHTML;
+                                    
+                    var valueID = valueIDwithtagname.substring(valueIDwithtagname.indexOf('>') + 1,  valueIDwithtagname.lastIndexOf('<'));
+                    
+                    var returnDate = {valueID,
+                                     dateReturn};
+                    //alert(JSON.stringify(returnDate));
+                    //сделать кнопку нажатой (плоской). запоминать это состояние, чтоб когда снова загузится страница, было видно, какая книга сдана.  и можно поменять текст: "книга сдана!"
+                    
+                    var pushedButton = document.getElementById(id); 
+                    pushedButton.style.cssText = "background: rgb(201, 194, 194); color: rgb(0, 0, 0);";
+                    //console.log(pushedButton.innerHTML);
+                    //pushedButton.getAttribute("value");
+                    pushedButton.setAttribute("value", "Returned!");
+
+                    $.ajax({
+                        method: 'PUT',
+                        url: 'http://localhost:8080/putDate',
+                        data: returnDate,
+                        success: function(msg){
+                                //alert(JSON.stringify(formData));
+                                console.log("this data --->" + returnDate);
+                            //alert("date" + msg);
+                        }
+                    });
+
+                });
+                
+            });
+        }
+
+    script.    
+        function deleteOrder(){
+            $(function(){
+               $(".deleteOrder").on("click", function(){
+                    var id = $(this).attr("id");
+                    var idNumber = id.match(/\d+/);
+                    var deleteOrderID = new Array();
+                   $(".deleteOrder").each(function(i){
+                      deleteOrderID.push(this.id); 
+                   });
+                   var idHiddenID = new Array();
+                    $(".hiddenID").each(function (i) {
+                        idHiddenID.push(this.id);
+                    });
+                   var valueIDwithtagname = document.getElementById(idHiddenID[idNumber]).innerHTML;
+                   var valueID = valueIDwithtagname.substring(valueIDwithtagname.indexOf('>') + 1,  valueIDwithtagname.lastIndexOf('<'));
+                   
+                   //alert(JSON.stringify(valueID));
+                   var removedItem = {valueID};
+                   
+                   var pushedButton = document.getElementById(id);
+                   pushedButton.style.cssText = "background: rgb(201, 194, 194); color: rgb(0, 0, 0);";
+                   pushedButton.setAttribute("value", "Deleted!");
+                   
+                   $.ajax({
+                        method: 'DELETE',
+                        url: 'http://localhost:8080/deleteOrder',
+                        data: removedItem,
+                        success: function(msg){
+                                console.log("this data --->" +  removedItem);
+                        }
+                    });
+               }); 
+            });
+        }
 
 
+        
+
+         
     
+          
+    
+        
 
       
 

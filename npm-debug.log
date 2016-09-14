@@ -1,0 +1,237 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'C:\\Program Files\\nodejs\\node.exe',
+1 verbose cli   'C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js',
+1 verbose cli   'install' ]
+2 info using npm@3.10.3
+3 info using node@v6.4.0
+4 silly loadCurrentTree Starting
+5 silly install loadCurrentTree
+6 silly install readLocalPackageData
+7 silly install normalizeTree
+8 silly loadCurrentTree Finishing
+9 silly loadIdealTree Starting
+10 silly install loadIdealTree
+11 silly cloneCurrentTree Starting
+12 silly install cloneCurrentTreeToIdealTree
+13 silly cloneCurrentTree Finishing
+14 silly loadShrinkwrap Starting
+15 silly install loadShrinkwrap
+16 silly loadShrinkwrap Finishing
+17 silly loadAllDepsIntoIdealTree Starting
+18 silly install loadAllDepsIntoIdealTree
+19 silly fetchNamedPackageData debug
+20 silly mapToRegistry name debug
+21 silly mapToRegistry using default registry
+22 silly mapToRegistry registry https://registry.npmjs.org/
+23 silly mapToRegistry data Result {
+23 silly mapToRegistry   raw: 'debug',
+23 silly mapToRegistry   scope: null,
+23 silly mapToRegistry   escapedName: 'debug',
+23 silly mapToRegistry   name: 'debug',
+23 silly mapToRegistry   rawSpec: '',
+23 silly mapToRegistry   spec: 'latest',
+23 silly mapToRegistry   type: 'tag' }
+24 silly mapToRegistry uri https://registry.npmjs.org/debug
+25 silly fetchNamedPackageData mongodb-wrapper
+26 silly mapToRegistry name mongodb-wrapper
+27 silly mapToRegistry using default registry
+28 silly mapToRegistry registry https://registry.npmjs.org/
+29 silly mapToRegistry data Result {
+29 silly mapToRegistry   raw: 'mongodb-wrapper',
+29 silly mapToRegistry   scope: null,
+29 silly mapToRegistry   escapedName: 'mongodb-wrapper',
+29 silly mapToRegistry   name: 'mongodb-wrapper',
+29 silly mapToRegistry   rawSpec: '',
+29 silly mapToRegistry   spec: 'latest',
+29 silly mapToRegistry   type: 'tag' }
+30 silly mapToRegistry uri https://registry.npmjs.org/mongodb-wrapper
+31 verbose request uri https://registry.npmjs.org/mongodb-wrapper
+32 verbose request no auth needed
+33 info attempt registry request try #1 at 17:56:53
+34 verbose request id 8f937bb6b150ce19
+35 http request GET https://registry.npmjs.org/mongodb-wrapper
+36 verbose request uri https://registry.npmjs.org/debug
+37 verbose request no auth needed
+38 info attempt registry request try #1 at 17:56:53
+39 verbose etag "EQPWCBKAJDOSRP7AQ94KYJDWU"
+40 http request GET https://registry.npmjs.org/debug
+41 http 200 https://registry.npmjs.org/debug
+42 verbose headers { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+42 verbose headers   etag: '"4MD7F1VK3FD4SM3SPTON3D5U0"',
+42 verbose headers   'content-type': 'application/json',
+42 verbose headers   'content-encoding': 'gzip',
+42 verbose headers   'cache-control': 'max-age=300',
+42 verbose headers   'content-length': '9438',
+42 verbose headers   'accept-ranges': 'bytes',
+42 verbose headers   date: 'Fri, 09 Sep 2016 14:56:53 GMT',
+42 verbose headers   via: '1.1 varnish',
+42 verbose headers   age: '288',
+42 verbose headers   connection: 'keep-alive',
+42 verbose headers   'x-served-by': 'cache-fra1229-FRA',
+42 verbose headers   'x-cache': 'HIT',
+42 verbose headers   'x-cache-hits': '27',
+42 verbose headers   'x-timer': 'S1473433013.456388,VS0,VE0',
+42 verbose headers   vary: 'Accept-Encoding' }
+43 silly get cb [ 200,
+43 silly get   { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+43 silly get     etag: '"4MD7F1VK3FD4SM3SPTON3D5U0"',
+43 silly get     'content-type': 'application/json',
+43 silly get     'content-encoding': 'gzip',
+43 silly get     'cache-control': 'max-age=300',
+43 silly get     'content-length': '9438',
+43 silly get     'accept-ranges': 'bytes',
+43 silly get     date: 'Fri, 09 Sep 2016 14:56:53 GMT',
+43 silly get     via: '1.1 varnish',
+43 silly get     age: '288',
+43 silly get     connection: 'keep-alive',
+43 silly get     'x-served-by': 'cache-fra1229-FRA',
+43 silly get     'x-cache': 'HIT',
+43 silly get     'x-cache-hits': '27',
+43 silly get     'x-timer': 'S1473433013.456388,VS0,VE0',
+43 silly get     vary: 'Accept-Encoding' } ]
+44 verbose get saving debug to C:\Users\skamyshny\AppData\Roaming\npm-cache\registry.npmjs.org\debug\.cache.json
+45 verbose correctMkdir C:\Users\skamyshny\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+46 silly resolveWithNewModule debug@0.7.4 checking installable status
+47 silly cache add args [ 'debug@~0.7.4', null ]
+48 verbose cache add spec debug@~0.7.4
+49 silly cache add parsed spec Result {
+49 silly cache add   raw: 'debug@~0.7.4',
+49 silly cache add   scope: null,
+49 silly cache add   escapedName: 'debug',
+49 silly cache add   name: 'debug',
+49 silly cache add   rawSpec: '~0.7.4',
+49 silly cache add   spec: '>=0.7.4 <0.8.0',
+49 silly cache add   type: 'range' }
+50 silly addNamed debug@>=0.7.4 <0.8.0
+51 verbose addNamed ">=0.7.4 <0.8.0" is a valid semver range for debug
+52 silly addNameRange { name: 'debug', range: '>=0.7.4 <0.8.0', hasData: false }
+53 silly mapToRegistry name debug
+54 silly mapToRegistry using default registry
+55 silly mapToRegistry registry https://registry.npmjs.org/
+56 silly mapToRegistry data Result {
+56 silly mapToRegistry   raw: 'debug',
+56 silly mapToRegistry   scope: null,
+56 silly mapToRegistry   escapedName: 'debug',
+56 silly mapToRegistry   name: 'debug',
+56 silly mapToRegistry   rawSpec: '',
+56 silly mapToRegistry   spec: 'latest',
+56 silly mapToRegistry   type: 'tag' }
+57 silly mapToRegistry uri https://registry.npmjs.org/debug
+58 verbose addNameRange registry:https://registry.npmjs.org/debug not in flight; fetching
+59 verbose get https://registry.npmjs.org/debug not expired, no request
+60 silly addNameRange number 2 { name: 'debug', range: '>=0.7.4 <0.8.0', hasData: true }
+61 silly addNameRange versions [ 'debug',
+61 silly addNameRange   [ '0.0.1',
+61 silly addNameRange     '0.1.0',
+61 silly addNameRange     '0.2.0',
+61 silly addNameRange     '0.3.0',
+61 silly addNameRange     '0.4.0',
+61 silly addNameRange     '0.4.1',
+61 silly addNameRange     '0.5.0',
+61 silly addNameRange     '0.6.0',
+61 silly addNameRange     '0.7.0',
+61 silly addNameRange     '0.7.1',
+61 silly addNameRange     '0.7.2',
+61 silly addNameRange     '0.7.3',
+61 silly addNameRange     '0.7.4',
+61 silly addNameRange     '0.8.0',
+61 silly addNameRange     '0.8.1',
+61 silly addNameRange     '1.0.0',
+61 silly addNameRange     '1.0.1',
+61 silly addNameRange     '1.0.2',
+61 silly addNameRange     '1.0.3',
+61 silly addNameRange     '1.0.4',
+61 silly addNameRange     '2.0.0',
+61 silly addNameRange     '2.1.0',
+61 silly addNameRange     '2.1.1',
+61 silly addNameRange     '2.1.2',
+61 silly addNameRange     '2.1.3',
+61 silly addNameRange     '2.2.0' ] ]
+62 silly addNamed debug@0.7.4
+63 verbose addNamed "0.7.4" is a plain semver version for debug
+64 silly cache afterAdd debug@0.7.4
+65 verbose afterAdd C:\Users\skamyshny\AppData\Roaming\npm-cache\debug\0.7.4\package\package.json not in flight; writing
+66 verbose correctMkdir C:\Users\skamyshny\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+67 verbose afterAdd C:\Users\skamyshny\AppData\Roaming\npm-cache\debug\0.7.4\package\package.json written
+68 http 200 https://registry.npmjs.org/mongodb-wrapper
+69 verbose headers { server: 'CouchDB/1.6.1 (Erlang OTP/R16B03)',
+69 verbose headers   etag: '"5IJTLYX6NUEDKBEUBYC4D81EO"',
+69 verbose headers   'content-type': 'application/json',
+69 verbose headers   'content-encoding': 'gzip',
+69 verbose headers   'cache-control': 'max-age=300',
+69 verbose headers   'content-length': '5357',
+69 verbose headers   'accept-ranges': 'bytes',
+69 verbose headers   date: 'Fri, 09 Sep 2016 14:56:54 GMT',
+69 verbose headers   via: '1.1 varnish',
+69 verbose headers   age: '0',
+69 verbose headers   connection: 'keep-alive',
+69 verbose headers   'x-served-by': 'cache-fra1236-FRA',
+69 verbose headers   'x-cache': 'MISS',
+69 verbose headers   'x-cache-hits': '0',
+69 verbose headers   'x-timer': 'S1473433013.457412,VS0,VE771',
+69 verbose headers   vary: 'Accept-Encoding' }
+70 silly get cb [ 200,
+70 silly get   { server: 'CouchDB/1.6.1 (Erlang OTP/R16B03)',
+70 silly get     etag: '"5IJTLYX6NUEDKBEUBYC4D81EO"',
+70 silly get     'content-type': 'application/json',
+70 silly get     'content-encoding': 'gzip',
+70 silly get     'cache-control': 'max-age=300',
+70 silly get     'content-length': '5357',
+70 silly get     'accept-ranges': 'bytes',
+70 silly get     date: 'Fri, 09 Sep 2016 14:56:54 GMT',
+70 silly get     via: '1.1 varnish',
+70 silly get     age: '0',
+70 silly get     connection: 'keep-alive',
+70 silly get     'x-served-by': 'cache-fra1236-FRA',
+70 silly get     'x-cache': 'MISS',
+70 silly get     'x-cache-hits': '0',
+70 silly get     'x-timer': 'S1473433013.457412,VS0,VE771',
+70 silly get     vary: 'Accept-Encoding' } ]
+71 verbose get saving mongodb-wrapper to C:\Users\skamyshny\AppData\Roaming\npm-cache\registry.npmjs.org\mongodb-wrapper\.cache.json
+72 verbose correctMkdir C:\Users\skamyshny\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+73 silly fetchPackageMetaData Error: No compatible version found: mongodb-wrapper@4.4.x
+73 silly fetchPackageMetaData Valid install targets:
+73 silly fetchPackageMetaData 1.0.3, 1.0.2, 1.0.1, 1.0.0, 0.4.0, 0.3.0, 0.2.7, 0.2.6, 0.2.5, 0.2.4, 0.2.3, 0.2.2, 0.2.1, 0.2.0, 0.1.1, 0.1.0
+73 silly fetchPackageMetaData
+73 silly fetchPackageMetaData     at pickVersionFromRegistryDocument (C:\Program Files\nodejs\node_modules\npm\lib\fetch-package-metadata.js:170:16)
+73 silly fetchPackageMetaData     at C:\Program Files\nodejs\node_modules\npm\node_modules\iferr\index.js:13:50
+73 silly fetchPackageMetaData     at C:\Program Files\nodejs\node_modules\npm\lib\utils\pulse-till-done.js:20:8
+73 silly fetchPackageMetaData     at saved (C:\Program Files\nodejs\node_modules\npm\lib\cache\caching-client.js:174:7)
+73 silly fetchPackageMetaData     at C:\Program Files\nodejs\node_modules\npm\node_modules\graceful-fs\polyfills.js:210:7
+73 silly fetchPackageMetaData     at FSReqWrap.oncomplete (fs.js:123:15)
+73 silly fetchPackageMetaData  error for mongodb-wrapper@4.4.x Error: No compatible version found: mongodb-wrapper@4.4.x
+73 silly fetchPackageMetaData Valid install targets:
+73 silly fetchPackageMetaData 1.0.3, 1.0.2, 1.0.1, 1.0.0, 0.4.0, 0.3.0, 0.2.7, 0.2.6, 0.2.5, 0.2.4, 0.2.3, 0.2.2, 0.2.1, 0.2.0, 0.1.1, 0.1.0
+73 silly fetchPackageMetaData
+73 silly fetchPackageMetaData     at pickVersionFromRegistryDocument (C:\Program Files\nodejs\node_modules\npm\lib\fetch-package-metadata.js:170:16)
+73 silly fetchPackageMetaData     at C:\Program Files\nodejs\node_modules\npm\node_modules\iferr\index.js:13:50
+73 silly fetchPackageMetaData     at C:\Program Files\nodejs\node_modules\npm\lib\utils\pulse-till-done.js:20:8
+73 silly fetchPackageMetaData     at saved (C:\Program Files\nodejs\node_modules\npm\lib\cache\caching-client.js:174:7)
+73 silly fetchPackageMetaData     at C:\Program Files\nodejs\node_modules\npm\node_modules\graceful-fs\polyfills.js:210:7
+73 silly fetchPackageMetaData     at FSReqWrap.oncomplete (fs.js:123:15)
+74 silly rollbackFailedOptional Starting
+75 silly rollbackFailedOptional Finishing
+76 silly runTopLevelLifecycles Starting
+77 silly runTopLevelLifecycles Finishing
+78 silly install printInstalled
+79 verbose stack Error: No compatible version found: mongodb-wrapper@4.4.x
+79 verbose stack Valid install targets:
+79 verbose stack 1.0.3, 1.0.2, 1.0.1, 1.0.0, 0.4.0, 0.3.0, 0.2.7, 0.2.6, 0.2.5, 0.2.4, 0.2.3, 0.2.2, 0.2.1, 0.2.0, 0.1.1, 0.1.0
+79 verbose stack
+79 verbose stack     at pickVersionFromRegistryDocument (C:\Program Files\nodejs\node_modules\npm\lib\fetch-package-metadata.js:170:16)
+79 verbose stack     at C:\Program Files\nodejs\node_modules\npm\node_modules\iferr\index.js:13:50
+79 verbose stack     at C:\Program Files\nodejs\node_modules\npm\lib\utils\pulse-till-done.js:20:8
+79 verbose stack     at saved (C:\Program Files\nodejs\node_modules\npm\lib\cache\caching-client.js:174:7)
+79 verbose stack     at C:\Program Files\nodejs\node_modules\npm\node_modules\graceful-fs\polyfills.js:210:7
+79 verbose stack     at FSReqWrap.oncomplete (fs.js:123:15)
+80 verbose cwd d:\ноут\library
+81 error Windows_NT 10.0.14393
+82 error argv "C:\\Program Files\\nodejs\\node.exe" "C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "install"
+83 error node v6.4.0
+84 error npm  v3.10.3
+85 error No compatible version found: mongodb-wrapper@4.4.x
+85 error Valid install targets:
+85 error 1.0.3, 1.0.2, 1.0.1, 1.0.0, 0.4.0, 0.3.0, 0.2.7, 0.2.6, 0.2.5, 0.2.4, 0.2.3, 0.2.2, 0.2.1, 0.2.0, 0.1.1, 0.1.0
+86 error If you need help, you may report this error at:
+86 error     <https://github.com/npm/npm/issues>
+87 verbose exit [ 1, true ]

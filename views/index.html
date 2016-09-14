@@ -33,46 +33,61 @@
 				$("#datepicker").datepicker();
 			});
     	</script>
-		<form  method = "post" accept-charset = "utf-8" id = "mainForm">
-                <div id = "booksDiv">
-				    <select class = "select2" multiple = "multiple" id = "books" name = "books">
-				        <option></option>
-						<optgroup label = "Густав Майринк">
-							<option value = "Ангел западного окна">Ангел западного окна</option>
-							<option value = "Голем">Голем</option>
-                            <option value = "Вальпургиева ночь">Вальпургиева ночь</option>
-                            <option value = "Зеленый лик">Зеленый лик</option>
-                            <option value = "Белый доминиканец">Белый доминиканец</option>
-				        </optgroup>
-				        <optgroup label = "Сат Ок">
-				            <option value = "Земля соленых скал">Земля соленых скал</option>
-				        </optgroup>
-                        <optgroup label = "Фридрих Ницше">
-                            <option value = "Антихрист">Антихрист</option>
-                            <option value = "Так говорил Заратустра">Так говорил Заратустра</option>
-                        </optgroup>
-                            <optgroup label = "Говард Лавкрафт">
-                            <option value = "Хребты безумия">Хребты безумия</option>
-                            <option value = "Вне времени">Вне времени</option>
-                            <option value = "Зов Ктулху">Зов Ктулху</option>
-                        </optgroup>
-                    </select>			
-                </div>                                  
-                <div id = "userNameDiv">
-				    <input type = "text" size = "30" placeholder = "Input your name" id = "userName"/>	
-                </div>
-                <div id = "datepickerDiv">
-					<input type = "text" id = "datepicker" placeholder = "Enter delivery date" />
-                </div>
-                <div id = "addDiv">
-					<input type = "submit" value = "Add new user" id = "add"/>
-                </div>
-        </form>
-        <form>
+        <table>
+            <tr>
+                
+                    <form  method = "post" accept-charset = "utf-8" id = "mainForm">
+                        <td>
+                            <div id = "booksDiv">
+                                <select class = "select2" multiple = "multiple" id = "books" name = "books">
+                                    <option></option>
+                                    <optgroup label = "Густав Майринк">
+                                        <option value = "Ангел западного окна">Ангел западного окна</option>
+                                        <option value = "Голем">Голем</option>
+                                        <option value = "Вальпургиева ночь">Вальпургиева ночь</option>
+                                        <option value = "Зеленый лик">Зеленый лик</option>
+                                        <option value = "Белый доминиканец">Белый доминиканец</option>
+                                    </optgroup>
+                                    <optgroup label = "Сат Ок">
+                                        <option value = "Земля соленых скал">Земля соленых скал</option>
+                                    </optgroup>
+                                    <optgroup label = "Фридрих Ницше">
+                                        <option value = "Антихрист">Антихрист</option>
+                                        <option value = "Так говорил Заратустра">Так говорил Заратустра</option>
+                                    </optgroup>
+                                        <optgroup label = "Говард Лавкрафт">
+                                        <option value = "Хребты безумия">Хребты безумия</option>
+                                        <option value = "Вне времени">Вне времени</option>
+                                        <option value = "Зов Ктулху">Зов Ктулху</option>
+                                    </optgroup>
+                                </select>			
+                            </div>  
+                        </td>
+                        <td>
+                            <div id = "userNameDiv">
+                                <input type = "text" size = "30" placeholder = "Input your name" id = "userName"/>	
+                            </div>
+                        </td>
+                        <td>
+                            <div id = "datepickerDiv">
+                                <input type = "text" id = "datepicker" placeholder = "Enter delivery date" />
+                            </div>
+                        </td>
+                        <td>
+                            <div id = "addDiv">
+                                <input type = "submit" value = "Add new user" id = "add"/>
+                            </div>
+                        </td>
+                    </form>
+               <td> 
+            <form>
                 <div>
                     <input type = "submit" value = "Clean" id = "clean" onclick = "clean()"/>
                 </div>
 			</form>
+                </td>
+            </tr>
+        </table>
         <script type = "text/javascript">
             $(function(){
                 $("#mainForm").submit(function(){
@@ -98,16 +113,6 @@
             return false;
                 });
             });
-            
-          /*   $.post( 'http://localhost:8080/readWriteData', 
-                  { books: $("#books").val(), 
-                  userName: $("#userName").val(),
-                  datePicker11: "hello", 
-                   test1: "tt"})
-          .done(function( data ) {
-            alert( "Data Loaded: " + data );
-          })
-            });*/
         </script>
         
        <script type = "text/javascript">

@@ -1,35 +1,51 @@
 body{
-	font: Georgia 14px;
-	background: rgba(175, 255, 255, 0.5);
-	color: rgba(0, 100, 255, 0.9);
+	font: Georgia 20px;
+	background: rgba(205, 157, 233, 0.5);
+	color: rgba(111, 29, 82, 1);
 	padding: 10px;
 	margin: 0px;
 }
 
 h1{
 	font-style: italic;
-	font-size: 24px;
-	color: rgba(72, 29, 168, 0.6);
+	font-size: 48px;
+	color: rgba(135, 8, 61, 1);
 }
 
 table, tr, td, th{
 	border: 1px solid white; 
 	padding: 5px;
 	border-collapse: collapse;
-	background: rgba(175, 255, 255, 0.1);
-	font-size: 14px;
+	/*background: rgba(175, 255, 255, 0.1);*/
+	font-size: 20px;
     /*color: brown;
     column-width: 100px;*/
 }
 
+#booksDiv{
+    width: auto;
+}
+
+li{
+    list-style-type: none;
+}
+
+.listInterval{
+    margin: 15px;
+}
+
+.hiddenID{
+    visibility: hidden;
+}
+
 #ordersTable{
-    width: 1000px;
+    width: 100%;
     height: auto;
     /*column-width: 150px;*/ 
 }
 
 #orderTable{
-    width: 900px;
+    width: auto;
 }
 
 .br{
@@ -53,6 +69,7 @@ table, tr, td, th{
 #userName, #datepicker{
     width: 230px;
 	height: 22px;
+    border-radius: 5px;
 }
 
 select, option, optgroup{
@@ -76,18 +93,19 @@ select, option, optgroup{
     font-weight: 500;
     color: white;
     text-decoration: none;
+    font-size: 16px;
     padding: .8em 1em calc(.8em + 3px);
     border-radius: 3px;
-    background: rgb(64,199,129);
-    box-shadow: 0 -3px rgb(53,167,110) inset;
+    background: rgb(155,30,239);
+    box-shadow: 0 -3px rgb(111,22,170) inset;
     transition: 0.2s;
 }
 
-#add:hover { background: rgb(53, 167, 110); }
+#add:hover { background: rgb(111,22,170); }
 
 #add:active {
-  background: rgb(33,147,90);
-  box-shadow: 0 3px rgb(33,147,90) inset;
+  background: rgb(111,22,170);
+  box-shadow: 0 3px rgb(111,22,170) inset;
 }
 
 #clean{
@@ -97,21 +115,65 @@ select, option, optgroup{
     font-weight: 500;
     color: white;
     text-decoration: none;
+    font-size:16px;
     padding: .8em 1em calc(.8em + 3px);
     border-radius: 3px;
-    background: rgb(255, 203, 0);
-    box-shadow: 0 -3px rgb(255, 203, 0) inset;
+    background: rgb(96, 39, 231);
+    box-shadow: 0 -3px rgb(69, 20, 167) inset;
     transition: 0.2s;
 }
 
-#clean:hover { background: rgb(255, 203, 0); }
+#clean:hover { background: rgb(69, 20, 167); }
 
 #clean:active {
-  background: rgb(255, 172, 0);
-  box-shadow: 0 3px rgb(255, 172, 0) inset;
+  background: rgb(69, 20, 167);
+  box-shadow: 0 3px rgb(69, 20, 167) inset;
 }
 
 #datepicker{
 	/*background-color: red;*/
 }
 
+.deleteOrder{
+    width: 150px;
+	height: 40px;
+    
+    font-weight: 500;
+    font-size: 16px;
+    color: white;
+    text-decoration: none;
+    padding: .8em 1em calc(.8em + 3px);
+    border-radius: 3px;
+    background: rgb(172, 57, 98);
+    box-shadow: 0 -3px rgb(172, 57, 98) inset;
+    transition: 0.2s;
+}
+
+.deleteOrder: hover { background: rgb(172, 57, 98); }
+
+.deleteOrder: active {
+  background: rgb(168, 8, 64);
+  box-shadow: 0 3px rgb(168, 8, 64) inset;
+}
+
+.returnBook{
+    width: 150px;
+	height: 40px;
+    
+    font-weight: 500;
+    color: white;
+    font-size: 16px;
+    text-decoration: none;
+    padding: .8em 1em calc(.8em + 3px);
+    border-radius: 3px;
+    background: rgb(128, 51, 151);
+    box-shadow: 0 -3px rgb(128, 51, 151) inset;
+    transition: 0.2s;
+}
+
+.returnBook:hover { background: rgb(128, 51, 151); }
+
+.returnBook:active {
+  background: rgb(99, 17, 124);
+  box-shadow: 0 3px rgb(99, 17, 124) inset;
+}

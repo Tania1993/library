@@ -7,10 +7,10 @@ var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
 var app = express();
 var routes = require('./routes/index');
-//var orders = require('./routes/orders');
 var setOrders = require('./controllers/setOrders');
 var getOrders = require('./controllers/getOrders');
 var putDate = require('./controllers/putDate');
+var deleteOrder = require('./controllers/deleteOrder');
 var dbConnection = require('./models/dbConnection');
 var mongooseSchema = require('./models/mongooseSchema');
 
@@ -32,7 +32,7 @@ app.use(express.static(path.join(__dirname, 'controllers')));
 app.use('/setOrders', setOrders);
 app.use('/getOrders', getOrders);
 app.use('/putDate', putDate);
-//app.use('/orders', orders);
+app.use('/deleteOrder', deleteOrder);
 app.use('/dbConnection', dbConnection);
 app.use('/mongooseSchema', mongooseSchema);
 
@@ -94,95 +94,3 @@ app.listen(8080, function(){
 
 module.exports = app;
 
-/*var express = require('express');
-var path = require('path');
-var favicon = require('static-favicon');
-var logger = require('morgan');
-var cookieParser = require('cookie-parser');
-var bodyParser = require('body-parser');
-var mongoose = require('mongoose');
-
-var routes = require('./routes/index');
-var users = require('./routes/users');
-var orders = require('./routes/orders');
-var getOrders = require('./controllers/getOrders');
-var setOrders = require('./controllers/setOrders');
-var dbConnection = require('./models/dbConnection');
-var mongooseSchema = require('./models/mongooseSchema');
-
-var app = express();
-
-// view engine setup
-app.set('view engine', 'jade');
-
-app.use(favicon());
-app.use(logger('dev'));
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded());
-app.use(cookieParser());
-app.use(express.static(path.join(__dirname, 'views')));
-app.use(express.static(path.join(__dirname, 'public')));
-app.use(express.static(path.join(__dirname, 'models')));
-//app.use(express.static(path.join(__dirname, 'controllers')));
-
-app.use('/', routes);
-app.use('/users', users);
-//app.use('/orders', orders);
-//app.use('/getOrders', getOrders);
-app.use('/setOrders', setOrders);
-app.use('/dbConnection', dbConnection);
-app.use('/mongooseSchema', mongooseSchema);
-
-/// catch 404 and forwarding to error handler
-app.use(function(req, res, next) {
-    var err = new Error('Not Found');
-    err.status = 404;
-    next(err);
-});
-
-/// error handlers
-
-// development error handler
-// will print stacktrace
-if (app.get('env') === 'development') {
-    app.use(function(err, req, res, next) {
-        res.status(err.status || 500);
-        res.render('error', {
-            message: err.message,
-            error: err
-        });
-    });
-}
-
-// production error handler
-// no stacktraces leaked to user
-app.use(function(err, req, res, next) {
-    res.status(err.status || 500);
-    res.render('error', {
-        message: err.message,
-        error: {}
-    });
-});
-
-app.get('/orders', function(req, res) {
-            AbonentsAndOrdersModel.find(function (err, orders) {
-                if (!err) {
-                    //allorders = orders;
-                    //res.render('orders', {orders: orders});
-                    return orders;
-                } else {
-                    res.statusCode = 500;
-                    return res.send({ error: 'Server error' });
-                }
-        });
-    });
-
-app.listen(8080, function(){
-    console.log('Express server listening on port 8080');
-});
-
-
-console.log("hello");
-
-module.exports = app;
-*/

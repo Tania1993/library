@@ -6,9 +6,11 @@ var db = require('../models/dbConnection');
 var Schema = mongoose.Schema;
 
 var AbonentsAndOrdersSchema = new Schema({
+    //id: {type: String, required: true},
     books: { type: Array, required: true },
     userName: { type: String, required: true },
-    datePipicker: { type: String, required: true }
+    datePipicker: { type: String, required: true },
+    dateReturn: {type: String}
 });
 
 

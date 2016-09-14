@@ -9,38 +9,52 @@ var Schema = mongoose.Schema;
 router.post('/', function(req, res) {
     
     console.log(req.body);
-    //console.log(req.body.datePipicker);
     var orders = new AbonentsAndOrdersModel({
         books: req.body.books,
         userName: req.body.userName,
-        //datePipicker: req.body.datePipicker
-        datePipicker: JSON.parse(req.body.datePipicker)
+        datePipicker: JSON.parse(req.body.datePipicker),
+        dateReturn: ""
     });
+    
+    var booksByOneAbonent = req.body.books;
+    var dataByOneAbonent = new Array(booksByOneAbonent.length);//object array 
+  
+    for(var i = 0; i < booksByOneAbonent.length; i++){
+        dataByOneAbonent[i] = {
+            books: req.body.books[i],
+            userName: req.body.userName,
+            datePipicker: JSON.parse(req.body.datePipicker),
+            dateReturn: ""
+        };
+    }
+    //console.log(dataByOneAbonent.length);
     console.log("this is orders ");
     console.log(JSON.stringify(orders));
     
-    var order = new AbonentsAndOrdersModel(orders);
-    order.save(function (err) {
-        if (!err) {
-            console.log("this is order");
-            console.log(JSON.stringify(order));
-            //console.log("order created, this is order" + JSON.stringify(order));
-            return res.send({ status: 'OK', order:order });
-        } else {
-            console.log(err);
-            if(err.name == 'ValidationError') {
-                res.statusCode = 400;
-                res.send({ error: 'Validation error' });
+    //var order = new AbonentsAndOrdersModel(orders);
+    for(var i = 0; i < dataByOneAbonent.length; i++){
+        var order = new AbonentsAndOrdersModel(dataByOneAbonent[i]);
+        order.save(function (err) {
+            if (!err) {
+                /*console.log("this is order");
+                console.log(JSON.stringify(order));*/
+                return res.send({ status: 'OK', order:order });
             } else {
-                res.statusCode = 500;
-                res.send({ error: 'Server error' });
+                console.log(err);
+                if(err.name == 'ValidationError') {
+                    res.statusCode = 400;
+                    res.send({ error: 'Validation error' });
+                } else {
+                    res.statusCode = 500;
+                    res.send({ error: 'Server error' });
+                }
+                console.log('Internal error(%d): %s', res.statusCode, err.message);
             }
-            console.log('Internal error(%d): %s', res.statusCode, err.message);
-        }
-    });
+        });
+    }
     AbonentsAndOrdersModel.find(function (err, orders) {
         console.log(JSON.stringify(orders));
     });
 });
-//module.exports = allorders;
+
 module.exports = router;
