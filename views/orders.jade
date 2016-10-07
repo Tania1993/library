@@ -21,7 +21,10 @@ block content
                                 li= order.datePipicker
                     td
                         each returnBook in order.books
-                            li: input(type = "submit" value = "Return book" class = "returnBook" onclick = "returnBook(this)")
+                            if order.dateReturn
+                                li: input(type = "submit" value = "Returned!" class = "returnBook" onclick = "returnBook(this)" style = "background: rgb(201, 194, 194); color: rgb(0, 0, 0);")
+                            else
+                                li: input(type = "submit" value = "Return book" class = "returnBook" onclick = "returnBook(this)" style = "/public/stylesheets/mystyle.css")
                     td
                         each deleteEntry in order.books
                             li: input(type = "submit" value = "Delete entry" class = "deleteOrder" onclick = "deleteOrder(this)")
